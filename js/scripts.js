@@ -1,5 +1,6 @@
 window.onload = function() {
 
+  // var namesEl = document.querySelector('.names');
   var messagesEl = document.querySelector('.messages');
   var typingSpeed = 20;
   var loadingText = '<b>•</b><b>•</b><b>•</b>';
@@ -15,12 +16,16 @@ window.onload = function() {
     if (current >= 22 || current < 5) return 'Have a good night'; // It's called greeting the intelligent way ! 
   }
 
+  var names = [
+  'Piyush Raj'
+  ]
+
   var messages = [
     'Hey there visitor, Thanks for coming here :)',
     'I\'m Piyush Raj, And here I present Chatulator',
     'Let\'s have a look.',
     'Hey! <br> You can contact me at <a href="mailto:contact@0x48piraj.co">contact@0x48piraj.co</a>',
-    '<a target="_blank" href="https://twitter.com/0x48piraj">twitter.com/0x48piraj</a><br><a target="_blank" href="https://github.com/0x48piraj">github.com/0x48piraj</a><br><a target="_blank" href="https://www.linkedin.com/in/0x48piraj/">linkedin.com/0x48piraj</a>',
+   // '<a target="_blank" href="https://twitter.com/0x48piraj">twitter.com/0x48piraj</a><br><a target="_blank" href="https://github.com/0x48piraj">github.com/0x48piraj</a><br><a target="_blank" href="https://www.linkedin.com/in/0x48piraj/">linkedin.com/0x48piraj</a>',
     getCurrentTime(),
     'Guess how I knew it!'
   ]
@@ -33,8 +38,9 @@ window.onload = function() {
     return px / getFontSize() + 'rem';
   }
 
-  var createBubbleElements = function(message, position) {
+  var createBubbleElements = function( name, message, position) {
     var bubbleEl = document.createElement('div');
+    var nameEl = document.createElement('div');
     var messageEl = document.createElement('span');
     var loadingEl = document.createElement('span');
     bubbleEl.classList.add('bubble');
@@ -42,13 +48,18 @@ window.onload = function() {
     bubbleEl.classList.add('cornered');
     bubbleEl.classList.add(position === 'right' ? 'right' : 'left');
     messageEl.classList.add('message');
+    nameEl.classList.add('name');
     loadingEl.classList.add('loading');
+    nameEl.innerHTML = name;
     messageEl.innerHTML = message;
     loadingEl.innerHTML = loadingText;
+    bubbleEl.appendChild(nameEl);
     bubbleEl.appendChild(loadingEl);
     bubbleEl.appendChild(messageEl);
     bubbleEl.style.opacity = 0;
+   
     return {
+      name: nameEl,
       bubble: bubbleEl,
       message: messageEl,
       loading: loadingEl
@@ -57,6 +68,11 @@ window.onload = function() {
 
   var getDimentions = function(elements) {
     return dimensions = {
+      name: {
+        w: pxToRem(elements.name.offsetWidth + 8),
+        h: pxToRem(elements.name.offsetHeight + 8)
+
+      },
       loading: {
         w: '4rem',
         h: '2.25rem'
@@ -72,9 +88,10 @@ window.onload = function() {
     }
   }
 
-  var sendMessage = function(message, position) {
+  var sendMessage = function(name, message, position) {
     var loadingDuration = (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + 500;
-    var elements = createBubbleElements(message, position);
+    var elements = createBubbleElements(name, message, position);
+    messagesEl.appendChild(elements.name);
     messagesEl.appendChild(elements.bubble);
     messagesEl.appendChild(document.createElement('br'));
     var dimensions = getDimentions(elements);
@@ -157,8 +174,9 @@ window.onload = function() {
 
   var sendMessages = function() {
     var message = messages[messageIndex];
+    var name = names;
     if (!message) return;
-    sendMessage(message);
+    sendMessage(name, message);
     ++messageIndex;
     setTimeout(sendMessages, (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + anime.random(900, 1200));
   }
