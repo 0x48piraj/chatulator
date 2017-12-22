@@ -16,6 +16,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #FFF;
 }
+.names{
+  overflow: auto;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 1rem .9rem;
+}
+}
 .messages {
   overflow: auto;
   width: 100vw;
