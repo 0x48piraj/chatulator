@@ -17,7 +17,7 @@ window.onload = function() {
   }
 
   var names = [
-  'Piyush Raj', 'K'
+  'Piyush Raj'
   ]
 
   var messages = [
