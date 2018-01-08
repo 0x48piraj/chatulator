@@ -17,15 +17,18 @@ window.onload = function() {
   }
 
   var names = [
-  'FOSSASIA Mentors'
+  'FOSSASIA'
   ]
 
   var messages = [
     'Hi! I\'m Piyush Raj A.K.A <a target="_blank" href="https://github.com/0x48piraj">@0x48piraj</a>',
-    'I made this application just to make my family smile. :)',
-    'Here are some words our mentors want to share!',
+    'I made this application just to make my Family, Smile. :)',
+    'Here are some words our Mentors want to share!',
     '<a target="_blank" href="https://github.com/ParthS007">@ParthS007</a> : <br> First of all, I would like to thank FOSSASIA for providing me this opportunity to mentor young talent. I have never thought that students will be such enthusiastic about open-source and as the program is approaching to it\'s end and I am happy that students are now contributing to main stream projects finding bugs , creating Issues and solving them.Some students are doing extraordinary well in terms of their code quality and helping others as well which is important in community. At last , I only say that GCI is a great program by Google which helps students a lot to increase their thinking in terms of technology and these students can be a part of great innovation in coming future.',
-   // '<a target="_blank" href="https://twitter.com/0x48piraj">twitter.com/0x48piraj</a><br><a target="_blank" href="https://github.com/0x48piraj">github.com/0x48piraj</a><br><a target="_blank" href="https://www.linkedin.com/in/0x48piraj/">linkedin.com/0x48piraj</a>',
+    '<a target="_blank" href="https://github.com/vaibhavsingh97">@vaibhavsingh97</a> : <br> My Experience with the FOSSASIA was awesome. As FOSSASIA\'s has many awesome projects which one can contribute too. I learnt a lot while contributing and peer to peer learning is what FOSSASIA taught me by reviewing PR\'s.',
+    '<a target="_blank" href="https://github.com/niccokunzmann">@niccokunzmann</a> : <br> Being part of Google Code-in as a mentor and maintainer, I get in contact with many students who like to give their free time to improve the labyrinth game and be part of the community. I hope and see that they learn, that it is fun to help each other, to build a project together, adapt it to their own needs and shape it with their own ideas. I enjoy being part of this part of their life and hope they can have this experience all the time.',
+    
+    // '<a target="_blank" href="https://twitter.com/0x48piraj">twitter.com/0x48piraj</a><br><a target="_blank" href="https://github.com/0x48piraj">github.com/0x48piraj</a><br><a target="_blank" href="https://www.linkedin.com/in/0x48piraj/">linkedin.com/0x48piraj</a>',
     getCurrentTime(),
     'Guess how I knew it!'
   ]
