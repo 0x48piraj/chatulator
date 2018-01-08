@@ -17,14 +17,14 @@ window.onload = function() {
   }
 
   var names = [
-  'Piyush Raj'
+  'FOSSASIA Mentors'
   ]
 
   var messages = [
-    'Hey there visitor, Thanks for coming here :)',
-    'I\'m Piyush Raj, And here I present Chatulator',
-    'Let\'s have a look.',
-    'Hey! <br> You can contact me at <a href="mailto:contact@0x48piraj.co">contact@0x48piraj.co</a>',
+    'Hi! I\'m Piyush Raj A.K.A <a target="_blank" href="https://github.com/0x48piraj">@0x48piraj</a>',
+    'I made this application just to make my family smile. :)',
+    'Here are some words our mentors want to share!',
+    '<a target="_blank" href="https://github.com/ParthS007">@ParthS007</a> : <br> First of all, I would like to thank FOSSASIA for providing me this opportunity to mentor young talent. I have never thought that students will be such enthusiastic about open-source and as the program is approaching to it\'s end and I am happy that students are now contributing to main stream projects finding bugs , creating Issues and solving them.Some students are doing extraordinary well in terms of their code quality and helping others as well which is important in community. At last , I only say that GCI is a great program by Google which helps students a lot to increase their thinking in terms of technology and these students can be a part of great innovation in coming future.',
    // '<a target="_blank" href="https://twitter.com/0x48piraj">twitter.com/0x48piraj</a><br><a target="_blank" href="https://github.com/0x48piraj">github.com/0x48piraj</a><br><a target="_blank" href="https://www.linkedin.com/in/0x48piraj/">linkedin.com/0x48piraj</a>',
     getCurrentTime(),
     'Guess how I knew it!'
